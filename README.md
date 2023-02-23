@@ -1,6 +1,7 @@
 Informacion del proyecto "Aprender"
 
 1.- Instalacion de laravel 9.0 => "laravel new aprender"
+
 2.- Instalacion de jetstream (control de usuarios, autenticacion) => "composer require laravel/jetstream"
 
 ##
