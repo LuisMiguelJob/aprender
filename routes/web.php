@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProgramController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+/* Ruta de programas */
+Route::resource('program', ProgramController::class);
