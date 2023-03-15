@@ -18,6 +18,8 @@ Route::get('inicio', function(){
     return view('inicio');
 });
 
+// Test
+
 Route::get('/', function () {
     return view('welcome');
 });
