@@ -4,6 +4,14 @@ Informacion del proyecto "Aprender"
 
 2.- Instalacion de jetstream (control de usuarios, autenticacion) => "composer require laravel/jetstream"
 
+3.- php artisan jetstream:install livewire --teams
+
+4.- npm install
+
+5.- configurar .env
+
+6.- php artisan migrate
+
 ##
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
