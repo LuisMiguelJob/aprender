@@ -8,6 +8,8 @@ Informacion del proyecto "Aprender"
 
 4.- npm install
 
+5.- npm run dev
+
 5.- configurar .env
 
 6.- php artisan migrate
