@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('codigo', 30); // un numero largo es mejor en un string
+            $table->string('tipo', 30);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

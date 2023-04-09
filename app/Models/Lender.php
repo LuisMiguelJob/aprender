@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Lender extends Model
 {
     use HasFactory;
+
+    public function programs(){
+        return $this->belongsToMany(Program::class);
+    }
 }

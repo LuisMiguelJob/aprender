@@ -23,7 +23,7 @@
       :class="{ 'overflow-hidden': isSideMenuOpen}"
     >
       <!-- Desktop sidebar -->
-      @include('layouts.navigation')
+      @include('layouts.navigation') {{-- Botones windmill, programs, inicio etc --}}
       
       <div class="flex flex-col flex-1">
         <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
@@ -52,7 +52,7 @@
             <!-- Search input -->
             @include('layouts.search')
           
-            <ul class="flex items-center flex-shrink-0 space-x-6">
+            <ul class="flex items-center flex-shrink-0 space-x-6"> {{-- Icono de cambiar iluminacion claro/oscuro --}}
               <!-- Theme toggler -->
               <li class="flex">
                 <button
@@ -92,10 +92,20 @@
               {{-- @include('layouts.notification') --}}
 
               <!-- Profile menu -->
-              @include('layouts.user-menu')
+              @auth
+                @include('layouts.user-menu')    
+              @endauth
 
+              @guest    
+                <a class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-md active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+                href="{{ route('login') }}"
+                >
+                  Ingresar
+                </a>
+              @endguest
             </ul>
           </div>
+
         </header>
         <main class="h-full pb-16 overflow-y-auto">
           <!-- Remove everything INSIDE this div to a really blank page -->

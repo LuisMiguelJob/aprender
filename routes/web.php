@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProgramController;
+use App\Models\Program;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,8 +21,8 @@ Route::get('inicio', function(){
 
 // Test
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function () { // Esta es la primera pagina que carga al poner la direccion url 
+    return view('inicio');
 });
 
 Route::middleware([
@@ -35,4 +36,6 @@ Route::middleware([
 });
 
 /* Ruta de programas */
-Route::resource('program', ProgramController::class);
+Route::post('program/{program}/add-lender/', [ProgramController::class, 'addLender'])->name('program.add-lender'); // agregar esto antes cuando se ponen metodos extra que los que proove el tipo resource
+// addLender es el nombre del metodo en el controlador, name es para ponerlo en href sin problema
+Route::resource('program', ProgramController::class); //->middleware('auth'); // El middleware con auth, es para comprobar un usuario y permitir entrar // primer metodo para middleware
